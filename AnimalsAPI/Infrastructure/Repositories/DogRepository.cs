@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    class IDogRepository
+    class DogRepository
     {
     }
 }
