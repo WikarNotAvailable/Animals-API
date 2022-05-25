@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public record Dog : AuditableEntity
+    public record Animal : AuditableEntity
     {
         public Guid id { get; init; }
+        public string specie { get; init; }
         public string name { get; init; }
         public string race { get; init; }
         public int age { get; init; }
