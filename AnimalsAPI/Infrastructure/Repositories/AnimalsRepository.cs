@@ -30,5 +30,11 @@ namespace Infrastructure.Repositories
         {
             animals.Add(animal);
         }
+
+        public void UpdateAnimal(Animal animal)
+        {
+            int index = animals.FindIndex(existingAnimal => existingAnimal.id == animal.id);
+            animals[index] = animal;
+        }
     }
 }

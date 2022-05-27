@@ -12,5 +12,6 @@ namespace Domain.Interfaces
         IEnumerable<Animal> GetAnimals();
         Animal GetAnimal(Guid _id);
         void AddAnimal(Animal animal);
+        void UpdateAnimal(Animal animal);
     }
 }

@@ -12,5 +12,6 @@ namespace Application.Interfaces
         IEnumerable<AnimalDto> GetAllAnimals();
         AnimalDto GetAnimal(Guid id);
         AnimalDto AddAnimal(CreateAnimalDto newAnimal);
+        void UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal);
     }
 }

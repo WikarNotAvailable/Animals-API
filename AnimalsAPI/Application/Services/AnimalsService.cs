@@ -37,5 +37,11 @@ namespace Application.Services
             repository.AddAnimal(animal);
             return mapper.Map<AnimalDto>(animal);
         }
+        public void UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)
+        {
+            var existingAnimal = repository.GetAnimal(id);
+            var animal = mapper.Map(updateAnimal, existingAnimal);
+            repository.UpdateAnimal(animal);
+        }
     }
 }

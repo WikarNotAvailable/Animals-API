@@ -39,5 +39,15 @@ namespace WebAPI.Controllers
             var animal = animalsService.AddAnimal(newAnimal);
             return Created($"/animals/{animal.id}", animal);
         }
+        [HttpPut("{id}")]
+        public ActionResult UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)
+        {
+            var animal = animalsService.GetAnimal(id);
+            if (animal == null)
+                return NotFound(); 
+
+            animalsService.UpdateAnimal(id, updateAnimal);
+            return NoContent();
+        }
     }
 }
