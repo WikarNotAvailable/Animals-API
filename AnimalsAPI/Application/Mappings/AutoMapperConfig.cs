@@ -15,6 +15,7 @@ namespace Application.Mappings
             => new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Animal, AnimalDto>();
+                cfg.CreateMap<CreateAnimalDto, Animal>();
             })
             .CreateMapper();
     }

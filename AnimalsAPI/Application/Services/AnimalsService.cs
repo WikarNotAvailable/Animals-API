@@ -1,6 +1,7 @@
 ﻿using Application.Dtos;
 using Application.Interfaces;
 using AutoMapper;
+using Domain.Entities;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Application.Services
             repository = _repository;
             mapper = _mapper;  
         }
+
         public IEnumerable<AnimalDto> GetAllAnimals()
         {
             var animals = repository.GetAnimals();
@@ -27,6 +29,12 @@ namespace Application.Services
         public AnimalDto GetAnimal(Guid id)
         {
             var animal = repository.GetAnimal(id);
+            return mapper.Map<AnimalDto>(animal);
+        }
+        public AnimalDto AddAnimal(CreateAnimalDto newAnimal)
+        {
+            var animal = mapper.Map<Animal>(newAnimal);
+            repository.AddAnimal(animal);
             return mapper.Map<AnimalDto>(animal);
         }
     }

@@ -25,5 +25,10 @@ namespace Infrastructure.Repositories
         {
             return animals.SingleOrDefault(animal => animal.id == _id);
         }
+
+        public void AddAnimal(Animal animal)
+        {
+            animals.Add(animal);
+        }
     }
 }

@@ -33,5 +33,11 @@ namespace WebAPI.Controllers
             }
             return animal;
         }
+        [HttpPost]
+        public ActionResult<AnimalDto> AddAnimal(CreateAnimalDto newAnimal)
+        {
+            var animal = animalsService.AddAnimal(newAnimal);
+            return Created($"/animals/{animal.id}", animal);
+        }
     }
 }
