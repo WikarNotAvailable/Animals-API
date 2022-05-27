@@ -49,5 +49,11 @@ namespace WebAPI.Controllers
             animalsService.UpdateAnimal(id, updateAnimal);
             return NoContent();
         }
-    }
+        [HttpDelete("{id}")]
+        public ActionResult Delete(Guid id)
+        {
+            animalsService.DeleteAnimal(id);
+            return NoContent();
+        }
+    } 
 }

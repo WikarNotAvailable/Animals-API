@@ -43,5 +43,11 @@ namespace Application.Services
             var animal = mapper.Map(updateAnimal, existingAnimal);
             repository.UpdateAnimal(animal);
         }
+
+        public void DeleteAnimal(Guid id)
+        {
+            var existingAnimal = repository.GetAnimal(id);
+            repository.DeleteAnimal(existingAnimal);
+        }
     }
 }

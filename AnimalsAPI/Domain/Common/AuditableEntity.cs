@@ -8,9 +8,9 @@ namespace Domain.Common
 {
     public abstract record AuditableEntity
     {
-        public DateTime created { get; init; }
-        public string createdBy { get; init; }
-        public DateTime? lastModified { get; init; }
-        public string lastModifiedBy { get; init; }
+        public DateTime created { get; set; }
+        public string createdBy { get; set; }
+        public DateTime? lastModified { get; set; }
+        public string lastModifiedBy { get; set; }
     }
 }

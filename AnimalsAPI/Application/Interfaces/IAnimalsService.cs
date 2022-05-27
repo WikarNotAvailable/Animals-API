@@ -13,5 +13,6 @@ namespace Application.Interfaces
         AnimalDto GetAnimal(Guid id);
         AnimalDto AddAnimal(CreateAnimalDto newAnimal);
         void UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal);
+        void DeleteAnimal(Guid id);
     }
 }

@@ -28,13 +28,19 @@ namespace Infrastructure.Repositories
 
         public void AddAnimal(Animal animal)
         {
+            animal.created = DateTime.UtcNow;
             animals.Add(animal);
         }
 
         public void UpdateAnimal(Animal animal)
         {
+            animal.lastModified = DateTime.UtcNow;
             int index = animals.FindIndex(existingAnimal => existingAnimal.id == animal.id);
             animals[index] = animal;
+        }
+        public void DeleteAnimal(Animal animal)
+        {
+            animals.Remove(animal);
         }
     }
 }

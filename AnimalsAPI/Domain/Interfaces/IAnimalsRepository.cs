@@ -13,5 +13,6 @@ namespace Domain.Interfaces
         Animal GetAnimal(Guid _id);
         void AddAnimal(Animal animal);
         void UpdateAnimal(Animal animal);
+        void DeleteAnimal(Animal animal);
     }
 }
