@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "n2ytbp1/9r5N6n2aKfEKynGSbmPRHuAuGAr4CDilif67V5Jqxzgw+mOv91/DasuCtCczLIe6e5ncNznVwTqB+A==",
+  "dgSpecHash": "9xeip6u26b3Q+xI47DWb7eoXS49yH+1yItUw/faqeS//j90TC6Zc/+WjAnB0zm5tuJmtWCThca4j4LRJlwjd4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\wikar\\OneDrive\\Pulpit\\PROGRAMOWANIE\\Animals-API\\AnimalsAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\wikar\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\wikar\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\wikar\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\wikar\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",

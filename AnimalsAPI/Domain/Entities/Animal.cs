@@ -15,5 +15,15 @@ namespace Domain.Entities
         public string race { get; init; }
         public int age { get; init; }
         public string gender { get; init; }
+
+        public Animal (string _specie, string _name, string _race, int _age, string _gender)
+        {
+            id = Guid.NewGuid();
+            specie = _specie;
+            name = _name;
+            race = _race;
+            age = _age;
+            gender = _gender;
+        }
     }
 }

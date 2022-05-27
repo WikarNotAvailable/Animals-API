@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "J5PKOBFToFd4RKOaTxlZgjv2H12e/wxlyeYlabxgdK8mUKez9GfaaASaEN06BrB3LyMHxL2hnF0tneD63XPv8Q==",
+  "dgSpecHash": "lD+29Eaq64dkV5CDSky8Bkns9rplFy61kBGLrPZy3bBtReVHyfzbyTXpP7RRcXtLoqb0KXmF8K1BcE4Vbx7ruQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\wikar\\OneDrive\\Pulpit\\PROGRAMOWANIE\\Animals-API\\AnimalsAPI\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\wikar\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
