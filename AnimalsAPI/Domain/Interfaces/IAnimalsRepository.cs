@@ -10,5 +10,6 @@ namespace Domain.Interfaces
     public interface IAnimalsRepository
     {
         IEnumerable<Animal> GetAnimals();
+        Animal GetAnimal(Guid _id);
     }
 }

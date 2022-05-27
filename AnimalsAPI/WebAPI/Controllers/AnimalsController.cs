@@ -23,5 +23,15 @@ namespace WebAPI.Controllers
             var animals = animalsService.GetAllAnimals();
             return animals;
         }
+        [HttpGet("{id}")]
+        public ActionResult<AnimalDto> GetAnimal(Guid id)
+        {
+            var animal = animalsService.GetAnimal(id);
+            if(animal == null)
+            {
+                return NotFound();
+            }
+            return animal;
+        }
     }
 }

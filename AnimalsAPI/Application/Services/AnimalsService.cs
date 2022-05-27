@@ -24,5 +24,10 @@ namespace Application.Services
             var animals = repository.GetAnimals();
             return mapper.Map<IEnumerable<AnimalDto>>(animals);
         }
+        public AnimalDto GetAnimal(Guid id)
+        {
+            var animal = repository.GetAnimal(id);
+            return mapper.Map<AnimalDto>(animal);
+        }
     }
 }

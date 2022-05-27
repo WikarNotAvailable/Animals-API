@@ -16,9 +16,14 @@ namespace Infrastructure.Repositories
         {
             new Animal("Dog", "Florek", "Shih-tzu", 7, "Male")
         };
+
         public IEnumerable<Animal> GetAnimals()
         {
             return animals;
+        }
+        public Animal GetAnimal(Guid _id)
+        {
+            return animals.SingleOrDefault(animal => animal.id == _id);
         }
     }
 }

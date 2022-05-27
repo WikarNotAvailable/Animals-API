@@ -10,5 +10,6 @@ namespace Application.Interfaces
     public interface IAnimalsService
     {
         IEnumerable<AnimalDto> GetAllAnimals();
+        AnimalDto GetAnimal(Guid id);
     }
 }
