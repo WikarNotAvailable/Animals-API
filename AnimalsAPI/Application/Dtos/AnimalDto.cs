@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Application.Mappings;
+using AutoMapper;
+using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Dtos
 {
-    public record AnimalDto
+    public record AnimalDto : IMap
     {
         public Guid id { get; init; }
         public string specie { get; init; }
@@ -14,5 +17,10 @@ namespace Application.Dtos
         public string race { get; init; }
         public int age { get; init; }
         public string gender { get; init; }
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<Animal, AnimalDto>();
+        }
     }
 }

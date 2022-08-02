@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Installers
 {
-    interface IInstaller
+    public interface IInstaller
     {
         void InstallServices(IServiceCollection services, IConfiguration Configuration);
     }
