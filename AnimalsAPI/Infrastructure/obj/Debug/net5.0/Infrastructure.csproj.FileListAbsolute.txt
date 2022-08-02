@@ -15,3 +15,6 @@ C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructu
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache

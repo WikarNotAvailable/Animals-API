@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lD+29Eaq64dkV5CDSky8Bkns9rplFy61kBGLrPZy3bBtReVHyfzbyTXpP7RRcXtLoqb0KXmF8K1BcE4Vbx7ruQ==",
+  "dgSpecHash": "iisroii5FYXTIXl+yN5g+hGYhAPAhrVkg6z45WEyWwZy98MAZ1LR3ujYRXAIq44YFRHri03ESSwX29PtoWL0aA==",
   "success": true,
   "projectFilePath": "C:\\Users\\wikar\\OneDrive\\Pulpit\\PROGRAMOWANIE\\Animals-API\\AnimalsAPI\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wikar\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
-    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
