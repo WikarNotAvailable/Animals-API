@@ -22,33 +22,33 @@ namespace Application.Services
             mapper = _mapper;  
         }
 
-        public IEnumerable<AnimalDto> GetAllAnimals()
+        public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync()
         {
-            var animals = repository.GetAnimals();
+            var animals = await repository.GetAnimalsAsync();
             return mapper.Map<IEnumerable<AnimalDto>>(animals);
         }
-        public AnimalDto GetAnimal(Guid id)
+        public async Task<AnimalDto> GetAnimalAsync(Guid id)
         {
-            var animal = repository.GetAnimal(id);
+            var animal = await repository.GetAnimalAsync(id);
             return mapper.Map<AnimalDto>(animal);
         }
-        public AnimalDto AddAnimal(CreateAnimalDto newAnimal)
+        public async Task<AnimalDto> AddAnimalAsync(CreateAnimalDto newAnimal)
         {
             var animal = mapper.Map<Animal>(newAnimal);
-            repository.AddAnimal(animal);
+            await repository.AddAnimalAsync(animal);
             return mapper.Map<AnimalDto>(animal);
         }
-        public void UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)
+        public async Task UpdateAnimalAsync(Guid id, UpdateAnimalDto updateAnimal)
         {
-            var existingAnimal = repository.GetAnimal(id);
+            var existingAnimal = await repository.GetAnimalAsync(id);
             var animal = mapper.Map(updateAnimal, existingAnimal);
-            repository.UpdateAnimal(animal);
+            await repository.UpdateAnimalAsync(animal);
         }
 
-        public void DeleteAnimal(Guid id)
+        public async Task DeleteAnimalAsync(Guid id)
         {
-            var existingAnimal = repository.GetAnimal(id);
-            repository.DeleteAnimal(existingAnimal);
+            var existingAnimal = await repository .GetAnimalAsync(id);
+            await repository.DeleteAnimalAsync(existingAnimal);
         }
     }
 }

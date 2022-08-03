@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,30 +20,31 @@ namespace Infrastructure.Repositories
             context = _context;
         }
 
-        public IEnumerable<Animal> GetAnimals()
+        public async Task<IEnumerable<Animal>> GetAnimalsAsync()
         {
-            return context.animals;
+            return await context.animals.ToListAsync();
         }
-        public Animal GetAnimal(Guid _id)
+        public async Task<Animal> GetAnimalAsync(Guid _id)
         {
-            return context.animals.SingleOrDefault(animal => animal.id == _id);
+            return await context.animals.SingleOrDefaultAsync(animal => animal.id == _id);
         }
 
-        public void AddAnimal(Animal animal)
+        public async Task AddAnimalAsync(Animal animal)
         {
             context.animals.Add(animal);
-            context.SaveChanges(); 
+            await context.SaveChangesAsync();
+            await Task.CompletedTask;
         }
 
-        public void UpdateAnimal(Animal animal)
+        public async Task UpdateAnimalAsync(Animal animal)
         {
             context.animals.Update(animal);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
-        public void DeleteAnimal(Animal animal)
+        public async Task DeleteAnimalAsync(Animal animal)
         {
             context.animals.Remove(animal);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
     }
 }

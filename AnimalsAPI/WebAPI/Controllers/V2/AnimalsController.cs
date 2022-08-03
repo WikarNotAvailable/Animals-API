@@ -22,19 +22,20 @@ namespace WebAPI.Controllers.V2
             animalsService = _animalsService;
         }
         [HttpGet]
-        public ActionResult<AnimalDto> GetAllAnimals()
+        public async Task<ActionResult<AnimalDto>> GetAllAnimals()
         {
-            var animals = animalsService.GetAllAnimals();
+            var animals = await animalsService.GetAllAnimalsAsync();
             return Ok(
-                new { 
-                        Posts = animals,
-                        Count = animals.Count()
-                    });
+                new
+                {
+                    Posts = animals,
+                    Count = animals.Count()
+                });
         }
         [HttpGet("{id}")]
-        public ActionResult<AnimalDto> GetAnimal(Guid id)
+        public async Task<ActionResult<AnimalDto>> GetAnimal(Guid id)
         {
-            var animal = animalsService.GetAnimal(id);
+            var animal = await animalsService.GetAnimalAsync(id);
             if (animal == null)
             {
                 return NotFound();
@@ -42,26 +43,27 @@ namespace WebAPI.Controllers.V2
             return animal;
         }
         [HttpPost]
-        public ActionResult<AnimalDto> AddAnimal(CreateAnimalDto newAnimal)
+        public async Task<ActionResult<AnimalDto>> AddAnimal(CreateAnimalDto newAnimal)
         {
-            var animal = animalsService.AddAnimal(newAnimal);
+            var animal = await animalsService.AddAnimalAsync(newAnimal);
             return Created($"/animals/{animal.id}", animal);
         }
         [HttpPut("{id}")]
-        public ActionResult UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)
+        public async Task<ActionResult> UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)
         {
-            var animal = animalsService.GetAnimal(id);
+            var animal = await animalsService.GetAnimalAsync(id);
             if (animal == null)
                 return NotFound();
 
-            animalsService.UpdateAnimal(id, updateAnimal);
+            await animalsService.UpdateAnimalAsync(id, updateAnimal);
             return NoContent();
         }
         [HttpDelete("{id}")]
-        public ActionResult Delete(Guid id)
+        public async Task<ActionResult> DeleteAnimal(Guid id)
         {
-            animalsService.DeleteAnimal(id);
+            await animalsService.DeleteAnimalAsync(id);
             return NoContent();
         }
     }
 }
+

@@ -10,10 +10,10 @@ namespace Application.Interfaces
     //interface used of animals service
     public interface IAnimalsService
     {
-        IEnumerable<AnimalDto> GetAllAnimals();
-        AnimalDto GetAnimal(Guid id);
-        AnimalDto AddAnimal(CreateAnimalDto newAnimal);
-        void UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal);
-        void DeleteAnimal(Guid id);
+        Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync();
+        Task<AnimalDto> GetAnimalAsync(Guid id);
+        Task<AnimalDto> AddAnimalAsync(CreateAnimalDto newAnimal);
+        Task UpdateAnimalAsync(Guid id, UpdateAnimalDto updateAnimal);
+        Task DeleteAnimalAsync(Guid id);
     }
 }
