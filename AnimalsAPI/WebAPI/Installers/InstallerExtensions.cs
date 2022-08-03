@@ -9,6 +9,7 @@ namespace WebAPI.Installers
 {
     public static class InstallerExtensions
     {
+        // class responsible for registration of services using each installer
         public static void InstallServicesInAssembly(this IServiceCollection services, IConfiguration configuration)
         {
             var installers = typeof(Startup).Assembly.ExportedTypes.Where(x =>

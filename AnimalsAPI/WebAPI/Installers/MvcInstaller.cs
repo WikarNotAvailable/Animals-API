@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Installers
 {
+    // installer responsible for registration of services connected with layer of application and infrastructure
     public class MvcInstaller : IInstaller
     {
         public void InstallServices(IServiceCollection services, IConfiguration Configuration)

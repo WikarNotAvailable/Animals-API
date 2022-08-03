@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
+    //Dependecy Injection for services connected with Application layer
     public static class DependencyInjection
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)

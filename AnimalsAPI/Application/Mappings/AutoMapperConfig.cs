@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Mappings
 {
+    //the basest configuration of automapper
     public static class AutoMapperConfig
     {
         public static IMapper Initialize()

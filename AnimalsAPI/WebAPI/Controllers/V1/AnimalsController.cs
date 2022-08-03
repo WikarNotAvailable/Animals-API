@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers.V1
 {
+    // First version of animals controller
+
     [ApiController]
     [ApiVersion("1.0")]
     [Route("animals")]

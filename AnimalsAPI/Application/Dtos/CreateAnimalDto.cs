@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Dtos
 {
+    //dto record for creating animals
     public record CreateAnimalDto : IMap 
     {
         public string specie { get; init; }

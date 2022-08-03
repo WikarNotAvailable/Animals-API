@@ -11,6 +11,7 @@ namespace Infrastructure.Data
 {
     public class AnimalsContext : DbContext
     {
+        //Defining a class that derives from DbContext to create appropriate database with EntityFramework (Code first attitude)
         public DbSet<Animal> animals { get; set; }
         public AnimalsContext(DbContextOptions options) : base(options)
         {

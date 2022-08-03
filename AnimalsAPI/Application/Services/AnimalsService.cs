@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
+    //Service operating on a animals repository, animals controller is using its functions
     public class AnimalsService : IAnimalsService
     {
         private readonly IAnimalsRepository repository;

@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-
-    
+    //Handling AnimalsRepository set in a SQL database   
     public class AnimalsRepository : IAnimalsRepository
     {
         private readonly AnimalsContext context;

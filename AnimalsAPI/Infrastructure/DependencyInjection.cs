@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
+    //Dependency Injection for services connected with Infrastructure layer
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)

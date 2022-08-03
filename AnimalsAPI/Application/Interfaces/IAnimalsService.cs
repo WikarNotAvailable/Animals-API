@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
+    //interface used of animals service
     public interface IAnimalsService
     {
         IEnumerable<AnimalDto> GetAllAnimals();

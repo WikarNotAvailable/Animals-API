@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Mappings
 {
+    // more detailed configuarion of automapper
     public class MappingProfile : Profile
     {
         public MappingProfile()

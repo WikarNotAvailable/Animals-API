@@ -10,6 +10,7 @@ namespace WebAPI.Installers
 {
     public class SwaggerInstaller : IInstaller
     {
+        // installer responsible for registration of services connected with Swagger
         public void InstallServices(IServiceCollection services, IConfiguration Configuration)
         {
             services.AddSwaggerGen(c =>

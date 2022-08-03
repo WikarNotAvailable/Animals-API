@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
+    //Interface for Animals repository
     public interface IAnimalsRepository
     {
         IEnumerable<Animal> GetAnimals();

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Dtos
 {
+    //dto class used for get requests to avoid returning piece of data straight from the database
     public record AnimalDto : IMap
     {
         public Guid id { get; init; }

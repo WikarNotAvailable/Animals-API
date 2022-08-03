@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers.V2
 {
+    // Second version of animals controller, mostly for testing purposes
+
     [ApiExplorerSettings(IgnoreApi = true)]
     [ApiVersion("2.0")]
     [ApiController]

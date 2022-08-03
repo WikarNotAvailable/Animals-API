@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Mappings
 {
+    //interface used for configuration of automapper
     public interface IMap
     {
         void Mapping(Profile profile);

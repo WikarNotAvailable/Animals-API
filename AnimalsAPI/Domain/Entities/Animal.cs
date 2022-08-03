@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
+    //Animal's properties
+
     [Table("Animals")]
     public record Animal : AuditableEntity
     {
