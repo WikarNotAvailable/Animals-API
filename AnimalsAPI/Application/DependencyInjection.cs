@@ -15,7 +15,7 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddSingleton<IAnimalsService, AnimalsService>();
+            services.AddScoped<IAnimalsService, AnimalsService>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;

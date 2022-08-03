@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Dtos
 {
-    public class UpdateAnimalDto : IMap
+    public record UpdateAnimalDto : IMap
     {
         public string specie { get; init; }
         public string name { get; init; }

@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,35 +13,39 @@ namespace Infrastructure.Repositories
     
     public class AnimalsRepository : IAnimalsRepository
     {
-        private static readonly List<Animal> animals = new()
+        private readonly AnimalsContext context;
+
+        public AnimalsRepository(AnimalsContext _context)
         {
-            new Animal("Dog", "Florek", "Shih-tzu", 7, "Male")
-        };
+            context = _context;
+        }
 
         public IEnumerable<Animal> GetAnimals()
         {
-            return animals;
+            return context.animals;
         }
         public Animal GetAnimal(Guid _id)
         {
-            return animals.SingleOrDefault(animal => animal.id == _id);
+            return context.animals.SingleOrDefault(animal => animal.id == _id);
         }
 
         public void AddAnimal(Animal animal)
         {
             animal.created = DateTime.UtcNow;
-            animals.Add(animal);
+            context.animals.Add(animal);
+            context.SaveChanges(); 
         }
 
         public void UpdateAnimal(Animal animal)
         {
             animal.lastModified = DateTime.UtcNow;
-            int index = animals.FindIndex(existingAnimal => existingAnimal.id == animal.id);
-            animals[index] = animal;
+            context.animals.Update(animal);
+            context.SaveChanges();
         }
         public void DeleteAnimal(Animal animal)
         {
-            animals.Remove(animal);
+            context.animals.Remove(animal);
+            context.SaveChanges();
         }
     }
 }

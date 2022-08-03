@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Controllers.V1
 {
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("animals")]
     public class AnimalsController : ControllerBase
     {

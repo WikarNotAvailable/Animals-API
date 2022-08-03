@@ -71,3 +71,4 @@ C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\D
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
