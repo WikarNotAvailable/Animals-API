@@ -31,14 +31,12 @@ namespace Infrastructure.Repositories
 
         public void AddAnimal(Animal animal)
         {
-            animal.created = DateTime.UtcNow;
             context.animals.Add(animal);
             context.SaveChanges(); 
         }
 
         public void UpdateAnimal(Animal animal)
         {
-            animal.lastModified = DateTime.UtcNow;
             context.animals.Update(animal);
             context.SaveChanges();
         }
