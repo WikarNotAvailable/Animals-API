@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAPI.Filters;
+using WebAPI.Helpers;
+using WebAPI.Wrappers;
 
 namespace WebAPI.Controllers.V1
 {
@@ -21,10 +24,14 @@ namespace WebAPI.Controllers.V1
             animalsService = _animalsService;
         }
         [HttpGet]
-        public async Task <IEnumerable<AnimalDto>> GetAllAnimals()
+        public async Task <ActionResult<IEnumerable<AnimalDto>>> GetAllAnimals([FromQuery]PaginationFilter paginationFilter)
         {
-            var animals = await animalsService.GetAllAnimalsAsync();
-            return animals;
+            var validPaginationFilter = new PaginationFilter(paginationFilter.pageNumber, paginationFilter.pageSize);
+
+            var animals = await animalsService.GetAllAnimalsAsync(validPaginationFilter.pageNumber, validPaginationFilter.pageSize);
+            var totalRecords = await animalsService.GetAllAnimalsCountAsync();
+
+            return Ok(PaginationHelper.CreatePagedResponse(animals, validPaginationFilter, totalRecords));
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<AnimalDto>> GetAnimal(Guid id)
@@ -34,13 +41,13 @@ namespace WebAPI.Controllers.V1
             {
                 return NotFound();
             }
-            return animal;
+            return Ok(new Response<AnimalDto>(animal));
         }
         [HttpPost]
         public async Task<ActionResult<AnimalDto>> AddAnimal(CreateAnimalDto newAnimal)
         {
             var animal = await animalsService.AddAnimalAsync(newAnimal);
-            return Created($"/animals/{animal.id}", animal);
+            return Created($"/animals/{animal.id}", new Response<AnimalDto>(animal));
         }
         [HttpPut("{id}")]
         public async Task <ActionResult> UpdateAnimal(Guid id, UpdateAnimalDto updateAnimal)

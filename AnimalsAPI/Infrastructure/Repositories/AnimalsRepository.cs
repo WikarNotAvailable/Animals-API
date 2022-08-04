@@ -20,9 +20,13 @@ namespace Infrastructure.Repositories
             context = _context;
         }
 
-        public async Task<IEnumerable<Animal>> GetAnimalsAsync()
+        public async Task<IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize)
         {
-            return await context.animals.ToListAsync();
+            return await context.animals.Skip((pageNumber - 1)* pageSize).Take(pageSize).ToListAsync();
+        }
+        public async Task<int> GetAllCountAsync()
+        {
+            return await context.animals.CountAsync();
         }
         public async Task<Animal> GetAnimalAsync(Guid _id)
         {
@@ -46,5 +50,7 @@ namespace Infrastructure.Repositories
             context.animals.Remove(animal);
             await context.SaveChangesAsync();
         }
+
+
     }
 }

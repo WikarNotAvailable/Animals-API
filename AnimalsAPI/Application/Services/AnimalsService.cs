@@ -22,10 +22,14 @@ namespace Application.Services
             mapper = _mapper;  
         }
 
-        public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync()
+        public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync(int pageNumber, int pageSize)
         {
-            var animals = await repository.GetAnimalsAsync();
+            var animals = await repository.GetAllAnimalsAsync(pageNumber, pageSize);
             return mapper.Map<IEnumerable<AnimalDto>>(animals);
+        }
+        public async Task<int> GetAllAnimalsCountAsync()
+        {
+            return await repository.GetAllCountAsync();
         }
         public async Task<AnimalDto> GetAnimalAsync(Guid id)
         {
@@ -50,5 +54,7 @@ namespace Application.Services
             var existingAnimal = await repository .GetAnimalAsync(id);
             await repository.DeleteAnimalAsync(existingAnimal);
         }
+
+   
     }
 }
