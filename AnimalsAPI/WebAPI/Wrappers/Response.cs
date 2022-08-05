@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Wrappers
 {
+    // basic wrapper
     public class Response<T>
     {
         public T data { get; set; }

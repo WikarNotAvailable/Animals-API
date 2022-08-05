@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Filters
 {
+    // filter used for pagination
     public class PaginationFilter
     {
         private const int maxPageSize = 20;

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Wrappers
 {
+    // wrapper used for pagination
     public class PagedResponse<T> : Response<T>
     {
         public int pageNumber { get; set; }
