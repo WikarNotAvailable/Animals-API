@@ -20,6 +20,10 @@ namespace Infrastructure.Repositories
         {
             context = _context;
         }
+        public IQueryable<Animal> GetAll()
+        {
+            return context.animals.AsQueryable();
+        }
 
         public async Task<IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending, string filterBy)
         {
@@ -57,6 +61,6 @@ namespace Infrastructure.Repositories
             await context.SaveChangesAsync();
         }
 
-
+ 
     }
 }

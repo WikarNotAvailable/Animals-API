@@ -72,3 +72,13 @@ C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\D
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\libman.json
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.OData.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.OData.Core.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.OData.Edm.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.OData.ModelBuilder.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Spatial.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Animals-API\AnimalsAPI\WebAPI\bin\Debug\net5.0\OData.Swagger.dll

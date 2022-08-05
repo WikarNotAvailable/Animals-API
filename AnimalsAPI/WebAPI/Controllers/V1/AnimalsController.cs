@@ -1,6 +1,7 @@
 ﻿using Application.Dtos;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,12 @@ namespace WebAPI.Controllers.V1
             var totalRecords = await animalsService.GetAllAnimalsCountAsync(filterBy);
 
             return Ok(PaginationHelper.CreatePagedResponse(animals, validPaginationFilter, totalRecords));
+        }
+        [HttpGet("[action]")]
+        [EnableQuery]
+        public IQueryable<AnimalDto> GetAll()
+        {
+            return animalsService.GetAllAnimals();
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<AnimalDto>> GetAnimal(Guid id)

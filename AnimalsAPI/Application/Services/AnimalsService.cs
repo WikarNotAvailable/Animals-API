@@ -21,6 +21,11 @@ namespace Application.Services
             repository = _repository;
             mapper = _mapper;  
         }
+        public IQueryable<AnimalDto> GetAllAnimals()
+        {
+            var animals = repository.GetAll();
+            return mapper.ProjectTo<AnimalDto>(animals);
+        }
 
         public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending, string filterBy)
         {
