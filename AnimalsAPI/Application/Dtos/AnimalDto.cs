@@ -18,10 +18,12 @@ namespace Application.Dtos
         public string race { get; init; }
         public int age { get; init; }
         public string gender { get; init; }
+        public DateTime CreationDate { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Animal, AnimalDto>();
+            profile.CreateMap<Animal, AnimalDto>()
+                .ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => src.created)); // more complex mapping example
         }
     }
 }
