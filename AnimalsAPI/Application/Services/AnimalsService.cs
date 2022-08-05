@@ -22,9 +22,9 @@ namespace Application.Services
             mapper = _mapper;  
         }
 
-        public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync(int pageNumber, int pageSize)
+        public async Task<IEnumerable<AnimalDto>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending)
         {
-            var animals = await repository.GetAllAnimalsAsync(pageNumber, pageSize);
+            var animals = await repository.GetAllAnimalsAsync(pageNumber, pageSize, sortField, ascending);
             return mapper.Map<IEnumerable<AnimalDto>>(animals);
         }
         public async Task<int> GetAllAnimalsCountAsync()

@@ -23,12 +23,19 @@ namespace WebAPI.Controllers.V1
         {
             animalsService = _animalsService;
         }
+        [HttpGet("GetSortFields")]
+        public ActionResult GetSortFields()
+        {
+            return Ok(SortingHelper.GetSortFields().Select(x => x.Key));
+        }
         [HttpGet]
-        public async Task <ActionResult<IEnumerable<AnimalDto>>> GetAllAnimals([FromQuery]PaginationFilter paginationFilter)
+        public async Task <ActionResult<IEnumerable<AnimalDto>>> GetAllAnimals([FromQuery]PaginationFilter paginationFilter, [FromQuery] SortingFilter sortingFilter)
         {
             var validPaginationFilter = new PaginationFilter(paginationFilter.pageNumber, paginationFilter.pageSize);
+            var validSortingFilter = new SortingFilter(sortingFilter.sortField, sortingFilter.ascending);
 
-            var animals = await animalsService.GetAllAnimalsAsync(validPaginationFilter.pageNumber, validPaginationFilter.pageSize);
+            var animals = await animalsService.GetAllAnimalsAsync(validPaginationFilter.pageNumber, validPaginationFilter.pageSize,
+                                                                  validSortingFilter.sortField, validSortingFilter.ascending);
             var totalRecords = await animalsService.GetAllAnimalsCountAsync();
 
             return Ok(PaginationHelper.CreatePagedResponse(animals, validPaginationFilter, totalRecords));

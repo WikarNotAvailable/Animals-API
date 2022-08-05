@@ -10,7 +10,7 @@ namespace Domain.Interfaces
     //Interface for Animals repository
     public interface IAnimalsRepository
     {
-        Task <IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize);
+        Task <IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending);
         Task<int> GetAllCountAsync();
         Task <Animal> GetAnimalAsync(Guid _id);
         Task AddAnimalAsync(Animal animal);
