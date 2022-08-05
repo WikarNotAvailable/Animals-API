@@ -21,13 +21,18 @@ namespace Infrastructure.Repositories
             context = _context;
         }
 
-        public async Task<IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending)
+        public async Task<IEnumerable<Animal>> GetAllAnimalsAsync(int pageNumber, int pageSize, string sortField, bool ascending, string filterBy)
         {
-            return await context.animals.OrderByPropertyName(sortField, ascending).Skip((pageNumber - 1)* pageSize).Take(pageSize).ToListAsync();
+            return await context.animals.Where(m => m.name.ToLower().Contains(filterBy.ToLower()))
+                .OrderByPropertyName(sortField, ascending)
+                .Skip((pageNumber - 1)* pageSize)
+                .Take(pageSize)
+                 .ToListAsync();
         }
-        public async Task<int> GetAllCountAsync()
+        public async Task<int> GetAllCountAsync(string filterBy)
         {
-            return await context.animals.CountAsync();
+            return await context.animals.Where(m => m.name.ToLower().Contains(filterBy.ToLower()))
+                .CountAsync();
         }
         public async Task<Animal> GetAnimalAsync(Guid _id)
         {
